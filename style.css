@@ -1,0 +1,128 @@
+/* ===== Global ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom, #fff7fb, #ffe6f0);
+  color: #333;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #ff66b3, #cc66ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== Navbar ===== */
+.custom-navbar {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 12px 0;
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .navbar-brand {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.custom-navbar .nav-link {
+  color: #333;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* pink underline hover */
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #ff80bf, #d580ff);
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #ff66b3;
+}
+
+.custom-navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 12px rgba(255, 102, 179, 0.2);
+}
+
+/* ===== Hero Section ===== */
+.hero-section {
+  background: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1500&q=80') center/cover fixed;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: white;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-img img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ffb6d9;
+  box-shadow: 0 0 20px rgba(255, 182, 217, 0.6);
+  transition: transform 0.4s ease;
+}
+
+.hero-img img:hover {
+  transform: scale(1.08);
+}
+
+/* ===== Buttons ===== */
+.btn-pink {
+  background: linear-gradient(90deg, #ff80bf, #d580ff);
+  color: white;
+  border-radius: 30px;
+  border: none;
+  padding: 10px 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-pink:hover {
+  background: linear-gradient(90deg, #ffb6d9, #e6a8ff);
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 153, 204, 0.6);
+}
+
+/* ===== Projects ===== */
+.project-card {
+  border: none;
+  box-shadow: 0 5px 15px rgba(255, 102, 179, 0.2);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #ffe6f0;
+  color: #333;
+}
